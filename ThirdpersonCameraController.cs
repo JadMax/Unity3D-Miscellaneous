@@ -1,4 +1,4 @@
-﻿// You need to make the camera's tag be "MainCamera" first.
+// You need to make the camera's tag be "MainCamera" first.
 
 using System.Collections;
 using System.Collections.Generic;
@@ -17,7 +17,6 @@ public class ThirdpersonCameraController : MonoBehaviour {
     float camBackDistance;
 
 	void Start () {
-        //cameraAxle = GameObject.FindGameObjectWithTag("3rdCameraAxle").transform;
         thirdPCamEuler = cameraAxle.localEulerAngles;
 
         thirdPCam = Camera.main;
@@ -56,24 +55,5 @@ public class ThirdpersonCameraController : MonoBehaviour {
                 thirdPCam.transform.Translate(Vector3.back * Time.deltaTime * 5);
             }
         }
-
-        /*
-        
-        Ray camBackRay = new Ray(thirdPCam.transform.position, -thirdPCam.transform.forward);
-        RaycastHit backRayHit;
-        Debug.DrawRay(thirdPCam.transform.position, -thirdPCam.transform.forward);
-        if (Physics.Raycast(camBackRay, out backRayHit))
-        {
-            camBackDistance = Vector3.Distance(thirdPCam.transform.position, backRayHit.point);
-            if (camBackDistance > 0 && camForwardDistance < camForwardMaxDistance)
-            {
-                thirdPCam.transform.Translate(Vector3.back * Time.deltaTime * 5);
-            }
-        }
-        else
-        {
-            camBackDistance = Mathf.Infinity;
-        }
-        */
     }
 }
