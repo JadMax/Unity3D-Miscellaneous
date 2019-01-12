@@ -38,7 +38,7 @@ public class FirstpersonCameraController : MonoBehaviour {
         }
 	    
 	if (cameraEulers.x < -90) { cameraEulers.x = -90; }
-        if (cameraEulers.x > 90) { cameraEulers.x = 90;			
+        if (cameraEulers.x > 90) { cameraEulers.x = 90; }			
         camera.transform.eulerAngles = cameraEulers;
     }
 }
